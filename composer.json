@@ -1,0 +1,30 @@
+{
+    "name": "santosalan/laravel-utils",
+    "description": "Laravel Utilities",
+    "keywords": ["php", "laravel", "utility", "methods", "utilities", "functions", "santosalan"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Santos",
+            "email": "alanssantos@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "^=5.4",
+        "santosalan/php-utils" : "^=0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SantosAlan\\LaravelUtils\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SantosAlan\\LaravelUtils\\ServiceProvider"
+            ]
+        }
+    }
+}

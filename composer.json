@@ -12,8 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
-        "laravel/framework": "^=5.4",
-        "santosalan/php-utils" : "^=0.0.1"
+        "laravel/framework": "^5.4",
+        "santosalan/php-utils" : "dev-master"
     },
     "autoload": {
         "psr-4": {

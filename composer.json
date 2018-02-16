@@ -9,7 +9,7 @@
             "email": "alanssantos@outlook.com"
         }
     ],
-    //"minimum-stability": "dev",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
         "laravel/framework": ">=5.4",
@@ -18,13 +18,6 @@
     "autoload": {
         "psr-4": {
             "SantosAlan\\LaravelUtils\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "SantosAlan\\LaravelUtils\\ServiceProvider"
-            ]
         }
     }
 }

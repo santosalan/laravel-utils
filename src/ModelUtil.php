@@ -1,5 +1,7 @@
 <?php
 
+namespace SantosAlan\LaravelUtils;
+
 trait ModelUtil {
 
     /**

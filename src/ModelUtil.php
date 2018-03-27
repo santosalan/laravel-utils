@@ -12,7 +12,7 @@ trait ModelUtil {
      * @param  Array  $conditions Array of arrays
      * @return Model
      */
-    public static function whereArr(Array $conditions)
+    public static function arrWhere(Array $conditions)
     {
 
         $model = static::class;

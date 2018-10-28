@@ -61,6 +61,30 @@ trait ModelUtil {
      */
     public static function arrWhere(Array $conditions)
     {
-        return self::filter($conditions);
+
+        $model = static::class;
+        $obj = new $model();
+
+        foreach ($conditions as $condition) {
+            if (count($condition) == 2) {
+                $obj = $obj->where($condition[0], $condition[1]);
+            } elseif (count($condition) == 3) {
+                if (strtolower(trim($condition[1])) === 'between') {
+                    $obj = $obj->whereBetween($condition[0], $condition[2]);
+                } else {
+                    $obj = $obj->where($condition[0], $condition[1], $condition[2]);
+                }
+            } elseif (count($condition) == 4) {
+                if (strtolower(trim($condition[1])) === 'between') {
+                    $obj = $obj->whereBetween($condition[0], $condition[2], $condition[3]);
+                } else {
+                    $obj = $obj->where($condition[0], $condition[1], $condition[2], $condition[3]);
+                }
+            } else {
+                throw new \Exception("Invalid " . strtoupper($key) . " condition", 1);
+            }
+        }
+
+        return $obj;
     }
 }

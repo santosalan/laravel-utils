@@ -2,3 +2,5 @@
 .env.*.php
 .env.php
 .env
+laravel-utils.sublime-project
+laravel-utils.sublime-workspace
